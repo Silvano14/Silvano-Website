@@ -16,14 +16,22 @@ class HeaderBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         AutoSizeText(
-          "Hi everyone and welcome to my website",
-          style: GoogleFonts.vollkorn(fontSize: 50),
-          maxLines: 3,
+          "Hi! I'm Silvano Norberti",
+          style: GoogleFonts.vollkorn(
+            fontSize: 60,
+            color: Colors.white,
+            backgroundColor: Colors.black,
+          ),
+          maxLines: 2,
         ),
         AutoSizeText(
           'I\'m a software developer and i have a huge passion about my work',
-          style: GoogleFonts.vollkorn(fontSize: 24),
-          maxLines: 3,
+          style: GoogleFonts.vollkorn(
+            fontSize: 24,
+            // color: Colors.white,
+            // backgroundColor: Colors.black,
+          ),
+          maxLines: 2,
         ),
       ],
     );

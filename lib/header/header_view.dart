@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter_web/header/header_body.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -29,16 +31,18 @@ class HeaderDesktopView extends StatelessWidget {
     final imageWidth = width * 0.47;
     return Container(
       height: 600,
-      width: 1507,
+      width: 1400,
       child: Row(
         children: [
           Expanded(
             child: HeaderBody(),
           ),
-          Image.asset(
-            'images/header_logo.png',
-            height: isSmall ? imageWidth : 500,
-          )
+          Container(
+            child: Image(
+              image: AssetImage('images/header_logo.png'),
+              height: isSmall ? imageWidth : 500,
+            ),
+          ),
         ],
       ),
     );
