@@ -29,7 +29,7 @@ class HeaderDesktopView extends StatelessWidget {
     final isSmall = width < 950;
     final imageWidth = width * 0.47;
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      padding: kScreenPadding,
       height: 600,
       width: kInitWidth,
       child: Row(
@@ -61,7 +61,6 @@ class HeaderMobileView extends StatelessWidget {
     return Container(
       width: width,
       height: height * 0.9,
-      // padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
       child: Column(
         children: [
           Expanded(

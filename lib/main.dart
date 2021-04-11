@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio_flutter_web/constants.dart';
 import 'package:portfolio_flutter_web/header/header_view.dart';
 import 'package:portfolio_flutter_web/navigation_bar/navigation_bar_view.dart';
 import 'package:portfolio_flutter_web/project/project_view.dart';
+import 'package:portfolio_flutter_web/skills/skills_view.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
@@ -20,11 +22,13 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: TextTheme(
             headline2: GoogleFonts.vollkorn(
-                color: Colors.white, backgroundColor: Colors.black),
+              color: Colors.white,
+              backgroundColor: Colors.black,
+            ),
             headline4: GoogleFonts.vollkorn(
-                fontSize: 30,
-                color: Colors.white,
-                backgroundColor: Colors.black),
+              fontSize: 30,
+              color: Colors.black,
+            ),
           )),
       home: PortfolioView(),
     );
@@ -36,16 +40,21 @@ class PortfolioView extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
+    final ScrollController scrollController = ScrollController(
+      initialScrollOffset: 1300,
+    );
     return Scaffold(
       endDrawer: DrawerView(),
       body: SingleChildScrollView(
+        controller: scrollController,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          padding: kScreenPadding,
           child: Column(
             children: [
               NavigationBarView(),
               HeaderView(),
               ProjectView(),
+              SkillsView(),
               Container(height: height, width: width, color: Colors.blue),
             ],
           ),

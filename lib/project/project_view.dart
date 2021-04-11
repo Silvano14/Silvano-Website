@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter_web/project/project_item_body.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import 'package:portfolio_flutter_web/constants.dart';
@@ -17,9 +18,8 @@ class ProjectDesktopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: kScreenPadding,
       width: kInitWidth,
-      height: 864,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -38,45 +38,10 @@ class ProjectDesktopView extends StatelessWidget {
                   child: PorjectItemBody(item: item),
                 ))
             ],
-          )
+          ),
+          SizedBox(height: 70)
         ],
       ),
-    );
-  }
-}
-
-class PorjectItemBody extends StatelessWidget {
-  const PorjectItemBody({
-    Key key,
-    @required this.item,
-  }) : super(key: key);
-
-  final ProjectItem item;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Image.asset(
-          item.image,
-        ),
-        SizedBox(height: 15),
-        Text(item.title, style: Theme.of(context).textTheme.headline4),
-        SizedBox(height: 10),
-        Text(item.description, style: TextStyle(fontSize: 17)),
-        SizedBox(height: 10),
-        Row(
-          children: [
-            for (final tech in item.technologies)
-              Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: Chip(label: Text(tech)),
-              )
-          ],
-        ),
-        SizedBox(height: 50)
-      ],
     );
   }
 }
@@ -121,13 +86,13 @@ class ProjectMobileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: kScreenPadding,
       width: kInitWidth,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 40),
           Divider(thickness: 3),
+          SizedBox(height: 20),
           Text(
             'Projects',
             style: Theme.of(context).textTheme.headline2,

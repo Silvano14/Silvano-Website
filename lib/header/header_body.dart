@@ -1,6 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HeaderBody extends StatelessWidget {
   final bool isMobile;
@@ -22,11 +21,7 @@ class HeaderBody extends StatelessWidget {
         ),
         AutoSizeText(
           'I\'m a software developer and i have a huge passion about my work',
-          style: GoogleFonts.vollkorn(
-            fontSize: 24,
-            // color: Colors.white,
-            // backgroundColor: Colors.black,
-          ),
+          style: Theme.of(context).textTheme.headline4,
           maxLines: 2,
         ),
       ],

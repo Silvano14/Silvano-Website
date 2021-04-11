@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter_web/constants.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class NavigationBarView extends StatelessWidget {
@@ -29,7 +30,7 @@ class NavigationDesktopView extends StatelessWidget {
           )),
       height: 100,
       width: 1507,
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: kScreenPadding,
       child: Row(
         children: [
           Container(
@@ -42,9 +43,7 @@ class NavigationDesktopView extends StatelessWidget {
           ),
           Spacer(flex: 3),
           for (NavigationItem item in kNavigationItem)
-            // Expanded(
             NavigationBarItem(onPressed: () {}, text: item.text),
-          // ),
         ],
       ),
     );
@@ -59,6 +58,7 @@ class NavigationItem {
 final kNavigationItem = [
   NavigationItem('| About me'),
   NavigationItem('| Projects'),
+  NavigationItem('| Skills'),
   NavigationItem('| Contact me'),
 ];
 
