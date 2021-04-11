@@ -1,6 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter_web/constants.dart';
 import 'package:portfolio_flutter_web/header/header_body.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -30,8 +29,9 @@ class HeaderDesktopView extends StatelessWidget {
     final isSmall = width < 950;
     final imageWidth = width * 0.47;
     return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
       height: 600,
-      width: 1400,
+      width: kInitWidth,
       child: Row(
         children: [
           Expanded(
@@ -61,7 +61,7 @@ class HeaderMobileView extends StatelessWidget {
     return Container(
       width: width,
       height: height * 0.9,
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+      // padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
       child: Column(
         children: [
           Expanded(

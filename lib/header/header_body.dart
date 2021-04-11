@@ -17,11 +17,7 @@ class HeaderBody extends StatelessWidget {
       children: [
         AutoSizeText(
           "Hi! I'm Silvano Norberti",
-          style: GoogleFonts.vollkorn(
-            fontSize: 60,
-            color: Colors.white,
-            backgroundColor: Colors.black,
-          ),
+          style: Theme.of(context).textTheme.headline2,
           maxLines: 2,
         ),
         AutoSizeText(

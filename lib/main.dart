@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_flutter_web/header/header_view.dart';
 import 'package:portfolio_flutter_web/navigation_bar/navigation_bar_view.dart';
+import 'package:portfolio_flutter_web/project/project_view.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
@@ -14,9 +16,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Silvano Norberti',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+          primarySwatch: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          textTheme: TextTheme(
+            headline2: GoogleFonts.vollkorn(
+                color: Colors.white, backgroundColor: Colors.black),
+            headline4: GoogleFonts.vollkorn(
+                fontSize: 30,
+                color: Colors.white,
+                backgroundColor: Colors.black),
+          )),
       home: PortfolioView(),
     );
   }
@@ -36,7 +45,7 @@ class PortfolioView extends StatelessWidget {
             children: [
               NavigationBarView(),
               HeaderView(),
-              // Secondo container
+              ProjectView(),
               Container(height: height, width: width, color: Colors.blue),
             ],
           ),
