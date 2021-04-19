@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter_web/project/project_view.dart';
 
-class PorjectItemBody extends StatelessWidget {
-  const PorjectItemBody({
+class ProjectItemBody extends StatelessWidget {
+  const ProjectItemBody({
     Key key,
     @required this.item,
   }) : super(key: key);

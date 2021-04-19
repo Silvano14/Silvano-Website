@@ -1,16 +1,18 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter_web/components/mobile_desktop_view_builder.dart';
 import 'package:portfolio_flutter_web/constants.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+import 'package:portfolio_flutter_web/portfolio/portfolio_view.dart';
+import 'package:provider/provider.dart';
 
 class NavigationBarView extends StatelessWidget {
+  final onPressed = () => print('click');
   @override
   Widget build(BuildContext context) {
-    return ResponsiveBuilder(builder: (context, size) {
-      if (size.isMobile) return NavigationBarMobileView();
-      return NavigationDesktopView();
-    });
+    return MobileDesktopViewBuilder(
+        mobileView: NavigationBarMobileView(),
+        desktopView: NavigationDesktopView());
   }
 }
 
@@ -21,6 +23,8 @@ class NavigationDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final navigationItem = context.watch<List<NavigationItem>>();
+    final scrollController = context.watch<ScrollController>();
     return Container(
       decoration: new BoxDecoration(
           color: Colors.black,
@@ -42,25 +46,21 @@ class NavigationDesktopView extends StatelessWidget {
             ),
           ),
           Spacer(flex: 3),
-          for (NavigationItem item in kNavigationItem)
-            NavigationBarItem(onPressed: () {}, text: item.text),
+          for (var item in navigationItem)
+            NavigationBarItem(
+                onPressed: () {
+                  return scrollController.animateTo(
+                    item.position,
+                    duration: Duration(milliseconds: 700),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                text: item.text),
         ],
       ),
     );
   }
 }
-
-class NavigationItem {
-  NavigationItem(this.text);
-  final String text;
-}
-
-final kNavigationItem = [
-  NavigationItem('| About me'),
-  NavigationItem('| Projects'),
-  NavigationItem('| Skills'),
-  NavigationItem('| Contact me'),
-];
 
 class NavigationBarMobileView extends StatelessWidget {
   const NavigationBarMobileView({

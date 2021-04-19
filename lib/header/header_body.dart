@@ -1,5 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:portfolio_flutter_web/utils/hover_extensions.dart';
 
 class HeaderBody extends StatelessWidget {
   final bool isMobile;
@@ -24,6 +26,21 @@ class HeaderBody extends StatelessWidget {
           style: Theme.of(context).textTheme.headline4,
           maxLines: 2,
         ),
+        SizedBox(height: 20),
+        TextButton(
+          onPressed: () => launch('mailto:silvano.norberti@gmail.com'),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              'Contact me',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+          ),
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(
+            Colors.redAccent,
+          )),
+        ).moveUpOnHover
       ],
     );
   }

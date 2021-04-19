@@ -1,47 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter_web/components/desktop_view_builder.dart';
+import 'package:portfolio_flutter_web/components/mobile_desktop_view_builder.dart';
+import 'package:portfolio_flutter_web/components/mobile_view_builder.dart';
 import 'package:portfolio_flutter_web/project/project_item_body.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-
-import 'package:portfolio_flutter_web/constants.dart';
 
 class ProjectView extends StatelessWidget {
+  const ProjectView({
+    Key key,
+  }) : super(key: key);
+  static const title = 'Projects';
   @override
   Widget build(BuildContext context) {
-    return ResponsiveBuilder(builder: (_, size) {
-      if (size.isMobile) return ProjectMobileView();
-      return ProjectDesktopView();
-    });
+    return MobileDesktopViewBuilder(
+      mobileView: ProjectMobileView(),
+      desktopView: ProjectDesktopView(),
+    );
   }
 }
 
 class ProjectDesktopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: kScreenPadding,
-      width: kInitWidth,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Projects',
-            style: Theme.of(context).textTheme.headline2,
-          ),
-          SizedBox(height: 20),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              for (final item in kProjectItems)
-                Expanded(
-                    child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: PorjectItemBody(item: item),
-                ))
-            ],
-          ),
-          SizedBox(height: 70)
-        ],
-      ),
+    return DesktopViewBuilder(
+      titleText: ProjectView.title,
+      children: [
+        SizedBox(height: 20),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            for (final item in kProjectItems)
+              Expanded(
+                  child: Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: ProjectItemBody(item: item),
+              ))
+          ],
+        ),
+        SizedBox(height: 70)
+      ],
     );
   }
 }
@@ -85,22 +81,9 @@ final kProjectItems = [
 class ProjectMobileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: kScreenPadding,
-      width: kInitWidth,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Divider(thickness: 3),
-          SizedBox(height: 20),
-          Text(
-            'Projects',
-            style: Theme.of(context).textTheme.headline2,
-          ),
-          SizedBox(height: 20),
-          for (final item in kProjectItems) PorjectItemBody(item: item)
-        ],
-      ),
+    return MobileViewBuilder(
+      titleText: ProjectView.title,
+      children: [for (final item in kProjectItems) ProjectItemBody(item: item)],
     );
   }
 }

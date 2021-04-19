@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter_web/components/mobile_desktop_view_builder.dart';
 import 'package:portfolio_flutter_web/constants.dart';
 import 'package:portfolio_flutter_web/header/header_body.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 class HeaderView extends StatelessWidget {
   const HeaderView({
@@ -10,11 +10,9 @@ class HeaderView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveBuilder(
-      builder: (_, size) {
-        if (size.isMobile) return HeaderMobileView();
-        return HeaderDesktopView();
-      },
+    return MobileDesktopViewBuilder(
+      mobileView: HeaderMobileView(),
+      desktopView: HeaderDesktopView(),
     );
   }
 }
