@@ -8,7 +8,7 @@ class SkillsView extends StatelessWidget {
   const SkillsView({
     Key key,
   }) : super(key: key);
-  static const title = 'Skills';
+  static const title = 'Abilità';
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;

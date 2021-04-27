@@ -32,7 +32,7 @@ class FooterDesktopView extends StatelessWidget {
             IconButton(
               icon: social.icon,
               onPressed: () => launch(social.url),
-              color: Colors.redAccent,
+              color: Colors.black,
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
               hoverColor: Colors.transparent,
@@ -62,7 +62,7 @@ class FooterMobileView extends StatelessWidget {
                 IconButton(
                   icon: social.icon,
                   onPressed: () => launch(social.url),
-                  color: Colors.redAccent,
+                  color: Colors.black,
                   splashColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   hoverColor: Colors.transparent,

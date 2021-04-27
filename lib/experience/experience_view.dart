@@ -10,7 +10,7 @@ class ExperienceView extends StatelessWidget {
     Key key,
   }) : super(key: key);
 
-  static const title = 'Experience';
+  static const title = 'Esperienze';
   @override
   Widget build(BuildContext context) {
     return MobileDesktopViewBuilder(
@@ -30,30 +30,23 @@ class ExperienceDesktopView extends StatelessWidget {
       children: [
         SizedBox(height: 20),
         Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            for (var rowIndex = 0;
-                rowIndex < experiences.length / 2;
-                rowIndex++)
+            for (var index = 0; index < experiences.length; index++)
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    for (var index = 0; index < experiences.length / 2; index++)
-                      Padding(
-                        padding: const EdgeInsets.only(right: 8.0, bottom: 8),
-                        child: ExperienceContainer(
-                            experience: experiences.elementAt(
-                              rowIndex * 2 + index,
-                            ),
-                            index: rowIndex * 2 + index),
-                      )
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8, bottom: 8),
+                      child: ExperienceContainer(
+                          experience: experiences.elementAt(index),
+                          index: index),
+                    )
                   ],
                 ),
               ),
           ],
         ),
-        SizedBox(height: 70)
       ],
     );
   }

@@ -17,8 +17,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           textTheme: TextTheme(
             headline2: GoogleFonts.vollkorn(
-              color: Colors.white,
-              backgroundColor: Colors.black,
+              color: Colors.black,
             ),
             headline4: GoogleFonts.vollkorn(
               fontSize: 30,

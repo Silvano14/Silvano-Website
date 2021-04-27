@@ -39,6 +39,7 @@ class HeaderDesktopView extends StatelessWidget {
             child: Image(
               image: AssetImage('images/header_logo.png'),
               height: isSmall ? imageWidth : 500,
+              filterQuality: FilterQuality.high,
             ),
           ),
         ],

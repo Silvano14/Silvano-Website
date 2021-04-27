@@ -33,9 +33,9 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
   void afterFirstLayout(BuildContext context) {
     setState(() {
       navigationItems = [
-        NavigationItem('| Projects', key: projectKey),
-        NavigationItem('| Skills', key: skillsKey),
-        NavigationItem('| Experience', key: experienceKey),
+        NavigationItem('Progetti', key: projectKey),
+        NavigationItem('Abilità', key: skillsKey),
+        NavigationItem('Esperienza', key: experienceKey),
       ];
     });
   }

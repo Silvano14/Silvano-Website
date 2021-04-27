@@ -31,7 +31,6 @@ dependencies:
   provider: ^5.0.0
   responsive_builder: ^0.4.1
   url_launcher: ^6.0.3
-  webfeed: ^0.6.0
 
 dev_dependencies:
   flutter_test:
@@ -51,7 +50,7 @@ flutter:
     - images/bulb.png
     - images/header_logo.png
     - images/navbar_logo.png
-    - images/www.png
+    - images/website.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

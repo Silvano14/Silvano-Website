@@ -8,7 +8,7 @@ class ProjectView extends StatelessWidget {
   const ProjectView({
     Key key,
   }) : super(key: key);
-  static const title = 'Projects';
+  static const title = 'Progetti';
   @override
   Widget build(BuildContext context) {
     return MobileDesktopViewBuilder(
@@ -24,14 +24,13 @@ class ProjectDesktopView extends StatelessWidget {
     return DesktopViewBuilder(
       titleText: ProjectView.title,
       children: [
-        SizedBox(height: 20),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             for (final item in kProjectItems)
               Expanded(
                   child: Padding(
-                padding: const EdgeInsets.only(right: 8.0),
+                padding: const EdgeInsets.only(right: 10.0),
                 child: ProjectItemBody(item: item),
               ))
           ],
@@ -45,12 +44,14 @@ class ProjectDesktopView extends StatelessWidget {
 class ProjectItem {
   final String image;
   final String title;
+  final String url;
   final String description;
   final List<String> technologies;
 
   ProjectItem({
     @required this.image,
     @required this.title,
+    @required this.url,
     @required this.description,
     @required this.technologies,
   });
@@ -60,22 +61,19 @@ final kProjectItems = [
   ProjectItem(
     image: 'images/bulb.png',
     title: 'LightManager',
-    description:
-        'With a microcontroller you can manage the lights if your home, by the wifi.',
+    url: 'https://github.com/Silvano14/LightManager',
+    description: 'Un progetto semplice con l\'uso di Arduino e Blynk ;)\n' +
+        'Utilizzando il progetto sarai in grado di gestire le luci\nnella tua stanza tramite un qualsiasi smartphone',
     technologies: ['Arduino', 'Blynk'],
   ),
   ProjectItem(
-    image: 'images/www.png',
-    title: 'This website',
-    description: 'This website is made by myself',
+    image: 'images/website.png',
+    title: 'Questo!',
+    url: 'https://github.com/Silvano14/myWebPage',
+    description:
+        'Questo sito è fatto da me, la voglia di imparare Flutter e Dart mi ha spinto a costruire un mio portfolio.',
     technologies: ['Flutter', 'Dart', 'Firebase'],
   ),
-  ProjectItem(
-    image: 'images/www.png',
-    title: 'This website',
-    description: 'This website is made by myself',
-    technologies: ['Flutter', 'Dart', 'Firebase'],
-  )
 ];
 
 class ProjectMobileView extends StatelessWidget {

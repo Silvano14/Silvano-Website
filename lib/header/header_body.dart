@@ -10,6 +10,18 @@ class HeaderBody extends StatelessWidget {
     this.isMobile = true,
   }) : super(key: key);
 
+  Color getColor(Set<MaterialState> states) {
+    const Set<MaterialState> interactiveStates = <MaterialState>{
+      MaterialState.pressed,
+      MaterialState.hovered,
+      MaterialState.focused,
+    };
+    if (states.any(interactiveStates.contains)) {
+      return Colors.redAccent;
+    }
+    return Colors.red;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -17,14 +29,17 @@ class HeaderBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         AutoSizeText(
-          "Hi! I'm Silvano Norberti",
+          "Ciao! Sono Silvano Norberti",
           style: Theme.of(context).textTheme.headline2,
           maxLines: 2,
         ),
+        SizedBox(height: 20),
         AutoSizeText(
-          'I\'m a software developer and i have a huge passion about my work',
+          'Sono uno sviluppatore software, e amo il mio lavoro.\n' +
+              'Tutto iniziò alle superiori, e da allora non ho più saputo fermarmi.\n' +
+              'Col tempo mi ha sempre più affascinato Javascript, a tal punto da ritenermi un front-end developer',
           style: Theme.of(context).textTheme.headline4,
-          maxLines: 2,
+          maxLines: 5,
         ),
         SizedBox(height: 20),
         TextButton(
@@ -32,14 +47,12 @@ class HeaderBody extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              'Contact me',
+              'Contattami',
               style: Theme.of(context).textTheme.headline4,
             ),
           ),
           style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(
-            Colors.redAccent,
-          )),
+              backgroundColor: MaterialStateProperty.resolveWith(getColor)),
         ).moveUpOnHover
       ],
     );

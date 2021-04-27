@@ -71,32 +71,26 @@ final experiences = [
     company: 'Welld',
     timeLine: 'May 2019 - Now',
     descriptions: [
-      '- Worked often with teams',
-      '- Learned how working with Agile method',
-      '- Studied new technologies as React or Electron',
+      'Nel tempo trascorso nell\’azienda ho avuto occasioni di aumentare le mie conoscenze con varie tecnologie.' +
+          'Tra le più utilizzate ci sono React, Electron, Typescript e Java (JEE). \n' +
+          'Col tempo mi sono preoccupato di scrivere Unit Test sempre più precisi e completi, avuto occasione anche di scrivere test di tipo E2E. \n' +
+          'Uso quotidiano di Git per la gestione del versionamento del software.',
     ],
   ),
   ExperienceInfo(
     company: 'Edr TOOLS',
-    timeLine: 'May 2019 - Now',
+    timeLine: 'Sep 2018 - Apr 2019',
     descriptions: [
-      '- Estrazione dei dati da dispositivi mobili con software creati per Raspberry con l\'utilizzo di librerie in C e Python.',
-      '- Creazione di script in Python per ottimizzare l’efficienza gestionale',
-      '- Gestione di software proprietari tramite QTCreator e CPP per l’estrazione dei dati da hard disk meccanici. ',
+      'Estrazione dei dati da dispositivi mobili con software creati per Raspberry con l\'utilizzo di librerie in C e Python.\n' +
+          'Creazione di script in Python per ottimizzare l’efficienza gestionale.\n' +
+          'Gestione di software proprietari tramite QTCreator e CPP per l’estrazione dei dati da hard disk meccanici.\n',
     ],
   ),
   ExperienceInfo(
     company: 'ITS Kennedy',
     timeLine: '2016 - 2018',
     descriptions: [
-      ' Attività e associazioni: Studio e praticità nel corso di studi I.O.T (Internet of Things)'
+      'Attività e associazioni: Studio e praticità nel corso di studi I.O.T (Internet of Things)'
     ],
   ),
-  ExperienceInfo(
-    company: 'ITS Kennedy',
-    timeLine: '2016 - 2018',
-    descriptions: [
-      ' Attività e associazioni: Studio e praticità nel corso di studi I.O.T (Internet of Things)'
-    ],
-  )
 ];

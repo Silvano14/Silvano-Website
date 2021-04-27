@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_flutter_web/components/mobile_desktop_view_builder.dart';
 import 'package:portfolio_flutter_web/constants.dart';
 import 'package:portfolio_flutter_web/portfolio/portfolio_view.dart';
@@ -26,20 +27,12 @@ class NavigationDesktopView extends StatelessWidget {
     final navigationItem = context.watch<List<NavigationItem>>();
     final scrollController = context.watch<ScrollController>();
     return Container(
-      decoration: new BoxDecoration(
-          color: Colors.black,
-          borderRadius: new BorderRadius.only(
-            bottomLeft: const Radius.circular(40.0),
-            bottomRight: const Radius.circular(40.0),
-          )),
-      height: 100,
-      width: 1507,
+      height: 80,
+      width: kInitWidth,
       padding: kScreenPadding,
       child: Row(
         children: [
           Container(
-            decoration: BoxDecoration(
-                border: Border.all(color: Colors.white), color: Colors.white),
             child: Image.asset(
               'images/navbar_logo.png',
               height: 40,
@@ -105,15 +98,17 @@ class NavigationBarItem extends StatelessWidget {
       padding: const EdgeInsets.only(left: 64),
       child: InkWell(
         borderRadius: BorderRadius.circular(20),
+        splashColor: Colors.transparent,
+        hoverColor: Colors.transparent,
         onTap: onPressed,
         mouseCursor: MaterialStateMouseCursor.clickable,
         child: AutoSizeText(
           text,
-          style: TextStyle(
+          style: GoogleFonts.vollkorn(
             fontSize: isSmall ? 17 : 24,
-            color: Colors.white,
           ),
           overflow: TextOverflow.ellipsis,
+          maxLines: 1,
         ),
       ),
     );
