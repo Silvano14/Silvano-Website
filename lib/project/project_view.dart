@@ -81,7 +81,10 @@ class ProjectMobileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return MobileViewBuilder(
       titleText: ProjectView.title,
-      children: [for (final item in kProjectItems) ProjectItemBody(item: item)],
+      children: [
+        for (final item in kProjectItems)
+          ProjectItemBody(item: item, isMobile: true)
+      ],
     );
   }
 }

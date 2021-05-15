@@ -29,17 +29,19 @@ class HeaderBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         AutoSizeText(
-          "Ciao! Sono Silvano Norberti",
+          "Benvenuto! Sono Silvano Norberti",
           style: Theme.of(context).textTheme.headline2,
-          maxLines: 2,
+          maxLines: 3,
+          overflow: TextOverflow.ellipsis,
         ),
         SizedBox(height: 20),
         AutoSizeText(
-          'Sono uno sviluppatore software, e amo il mio lavoro.\n' +
-              'Tutto iniziò alle superiori, e da allora non ho più saputo fermarmi.\n' +
-              'Col tempo mi ha sempre più affascinato Javascript, a tal punto da ritenermi un front-end developer',
+          'Sono uno Sviluppatore Software, e amo il mio lavoro.\n' +
+              'Mi son sempre più avvicinato al Front End, il mondo dove esiste un framework per ogni cosa.\n' +
+              'Mi piace seguire ogni tipo di conferenza e discutere con i colleghi sul miglior modo per adempiere le attività.',
           style: Theme.of(context).textTheme.headline4,
-          maxLines: 5,
+          overflow: TextOverflow.ellipsis,
+          maxLines: isMobile ?? false ? 8 : 5,
         ),
         SizedBox(height: 20),
         TextButton(

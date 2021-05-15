@@ -73,7 +73,7 @@ final experiences = [
     descriptions: [
       'Nel tempo trascorso nell\’azienda ho avuto occasioni di aumentare le mie conoscenze con varie tecnologie.' +
           'Tra le più utilizzate ci sono React, Electron, Typescript e Java (JEE). \n' +
-          'Col tempo mi sono preoccupato di scrivere Unit Test sempre più precisi e completi, avuto occasione anche di scrivere test di tipo E2E. \n' +
+          'Mi sono preoccupato di scrivere Unit Test sempre più precisi e completi, ho anche avuto occasione anche di scrivere test di tipo E2E. \n' +
           'Uso quotidiano di Git per la gestione del versionamento del software.',
     ],
   ),

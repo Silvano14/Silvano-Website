@@ -1,5 +1,6 @@
 import 'package:after_layout/after_layout.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio_flutter_web/constants.dart';
 import 'package:portfolio_flutter_web/drawer/drawer_view.dart';
 import 'package:portfolio_flutter_web/experience/experience_view.dart';
@@ -33,9 +34,21 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
   void afterFirstLayout(BuildContext context) {
     setState(() {
       navigationItems = [
-        NavigationItem('Progetti', key: projectKey),
-        NavigationItem('Abilità', key: skillsKey),
-        NavigationItem('Esperienza', key: experienceKey),
+        NavigationItem(
+          'Progetti',
+          FaIcon(FontAwesomeIcons.projectDiagram),
+          key: projectKey,
+        ),
+        NavigationItem(
+          'Abilità',
+          FaIcon(FontAwesomeIcons.running),
+          key: skillsKey,
+        ),
+        NavigationItem(
+          'Esperienza',
+          FaIcon(FontAwesomeIcons.gitlab),
+          key: experienceKey,
+        ),
       ];
     });
   }
@@ -79,9 +92,10 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
 }
 
 class NavigationItem {
-  NavigationItem(this.text, {@required this.key});
+  NavigationItem(this.text, this.icon, {@required this.key});
   final String text;
   final GlobalKey key;
+  final FaIcon icon;
 
   double get position => _getPosition(key);
 }

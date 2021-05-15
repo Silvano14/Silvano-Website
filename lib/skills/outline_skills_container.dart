@@ -20,7 +20,7 @@ class OutlineSkillsContainer extends StatelessWidget {
     final colors = ColoursAssets.all;
     return Container(
       width: isMobile ?? false ? double.infinity : null,
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
           border: Border.all(
             width: 3,

@@ -9,10 +9,11 @@ class ProjectItemBody extends StatefulWidget {
   const ProjectItemBody({
     Key key,
     @required this.item,
+    this.isMobile,
   }) : super(key: key);
 
   final ProjectItem item;
-
+  final bool isMobile;
   @override
   _ProjectItemBodyState createState() => _ProjectItemBodyState();
 }
@@ -73,12 +74,16 @@ class _ProjectItemBodyState extends State<ProjectItemBody> {
           Text(widget.item.description,
               style: GoogleFonts.vollkorn(fontSize: 20)),
           SizedBox(height: 10),
-          Row(
+          Wrap(
             children: [
               for (final tech in widget.item.technologies)
                 Padding(
-                  padding: const EdgeInsets.only(right: 8.0),
-                  child: Chip(label: Text(tech)),
+                  padding: const EdgeInsets.only(right: 8.0, bottom: 8.0),
+                  child: Chip(
+                      label: Text(
+                    tech,
+                    overflow: TextOverflow.ellipsis,
+                  )),
                 )
             ],
           ),
