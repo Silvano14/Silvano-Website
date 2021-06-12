@@ -35,6 +35,7 @@ class HeaderDesktopView extends StatelessWidget {
           HeaderBody(
             isMobile: false,
           ),
+          Spacer(),
           Container(
             child: Image(
               image: AssetImage('images/header_logo.png'),

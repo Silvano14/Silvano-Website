@@ -48,9 +48,12 @@ class _ProjectItemBodyState extends State<ProjectItemBody> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(
-            widget.item.image,
-            filterQuality: FilterQuality.high,
+          InkWell(
+            onTap: () => launch(widget.item.url),
+            child: Image.asset(
+              widget.item.image,
+              filterQuality: FilterQuality.high,
+            ),
           ),
           SizedBox(height: 10),
           MouseRegion(
@@ -66,9 +69,7 @@ class _ProjectItemBodyState extends State<ProjectItemBody> {
                       decoration: textDecoration,
                     ),
                     recognizer: new TapGestureRecognizer()
-                      ..onTap = () {
-                        launch(widget.item.url);
-                      })),
+                      ..onTap = () => launch(widget.item.url))),
           ),
           SizedBox(height: 10),
           Text(widget.item.description,
