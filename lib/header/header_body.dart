@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -34,12 +35,12 @@ class HeaderBody extends StatelessWidget {
           maxLines: 2,
         ),
         SizedBox(height: 20),
-        Text(
+        AutoSizeText(
           'Sono uno Sviluppatore Software, e amo il mio lavoro.\n' +
               'Mi son sempre più avvicinato al Front End, il mondo dove esiste un framework per ogni cosa.\n' +
-              'Mi piace seguire ogni tipo di conferenza e discutere con i colleghi\nsul miglior modo per adempiere le attività.',
+              'Mi piace seguire ogni tipo di conferenza e discutere con i colleghi sul miglior modo per adempiere le attività.',
           style: GoogleFonts.vollkorn(
-              color: Colors.black, fontSize: isMobile ? 12 : 25),
+              color: Colors.black, fontSize: isMobile ? 12 : 20),
           overflow: TextOverflow.ellipsis,
           maxLines: 10,
         ),
