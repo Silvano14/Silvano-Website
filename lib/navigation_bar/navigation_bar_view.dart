@@ -102,7 +102,7 @@ class NavigationBarItem extends StatelessWidget {
         hoverColor: Colors.transparent,
         onTap: onPressed,
         mouseCursor: MaterialStateMouseCursor.clickable,
-        child: AutoSizeText(
+        child: Text(
           text,
           style: GoogleFonts.vollkorn(
             fontSize: isSmall ? 17 : 24,

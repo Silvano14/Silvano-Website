@@ -32,13 +32,13 @@ class HeaderDesktopView extends StatelessWidget {
       width: kInitWidth,
       child: Row(
         children: [
-          Expanded(
-            child: HeaderBody(),
+          HeaderBody(
+            isMobile: false,
           ),
           Container(
             child: Image(
               image: AssetImage('images/header_logo.png'),
-              height: isSmall ? imageWidth : 500,
+              height: isSmall ? imageWidth : 400,
               filterQuality: FilterQuality.high,
             ),
           ),
@@ -62,10 +62,10 @@ class HeaderMobileView extends StatelessWidget {
       height: height * 0.9,
       child: Column(
         children: [
-          Expanded(
-              child: Image.asset(
+          Image.asset(
             'images/header_logo.png',
-          )),
+            width: 200,
+          ),
           HeaderBody(
             isMobile: true,
           )

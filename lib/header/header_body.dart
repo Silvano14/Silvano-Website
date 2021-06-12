@@ -1,7 +1,6 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:portfolio_flutter_web/utils/hover_extensions.dart';
 
 class HeaderBody extends StatelessWidget {
   final bool isMobile;
@@ -28,20 +27,21 @@ class HeaderBody extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        AutoSizeText(
-          "Benvenuto! Sono Silvano Norberti",
-          style: Theme.of(context).textTheme.headline2,
-          maxLines: 3,
-          overflow: TextOverflow.ellipsis,
+        Text(
+          "Ciao! Sono Silvano Norberti",
+          style: GoogleFonts.vollkorn(
+              color: Colors.black, fontSize: isMobile ? 30 : 40),
+          maxLines: 2,
         ),
         SizedBox(height: 20),
-        AutoSizeText(
+        Text(
           'Sono uno Sviluppatore Software, e amo il mio lavoro.\n' +
               'Mi son sempre più avvicinato al Front End, il mondo dove esiste un framework per ogni cosa.\n' +
-              'Mi piace seguire ogni tipo di conferenza e discutere con i colleghi sul miglior modo per adempiere le attività.',
-          style: Theme.of(context).textTheme.headline4,
+              'Mi piace seguire ogni tipo di conferenza e discutere con i colleghi\nsul miglior modo per adempiere le attività.',
+          style: GoogleFonts.vollkorn(
+              color: Colors.black, fontSize: isMobile ? 12 : 25),
           overflow: TextOverflow.ellipsis,
-          maxLines: isMobile ?? false ? 8 : 5,
+          maxLines: 10,
         ),
         SizedBox(height: 20),
         TextButton(
@@ -50,12 +50,15 @@ class HeaderBody extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               'Contattami',
-              style: Theme.of(context).textTheme.headline4,
+              style: GoogleFonts.vollkorn(
+                fontSize: isMobile ? 15 : 30,
+                color: Colors.black,
+              ),
             ),
           ),
           style: ButtonStyle(
               backgroundColor: MaterialStateProperty.resolveWith(getColor)),
-        ).moveUpOnHover
+        ),
       ],
     );
   }
