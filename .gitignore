@@ -20,7 +20,7 @@
 # is commented out by default.
 .vscode/
 
-# Firebase cache
+# Firebase
 .firebase/
 
 # Flutter/Dart/Pub related
