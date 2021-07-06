@@ -15,7 +15,7 @@ In this way you can see the website in a Chrome or Edge Browser.
 
 ## Authors
 
-Silvano Norberti - [LightManager](https://github.com/Silvano14/LightManager)
+Silvano Norberti - [Silvano Norberti Website](https://github.com/Silvano14/Silvano-Norberti-Website)
 See also the list of contributors who participated in this project.
 
 ## License
