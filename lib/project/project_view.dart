@@ -68,7 +68,7 @@ final kProjectItems = [
   ),
   ProjectItem(
     image: 'images/website.png',
-    title: 'Questo',
+    title: 'silvanonorberti.me',
     url: 'https://github.com/Silvano14/myWebPage',
     description:
         'Questo sito è fatto da me, la voglia di imparare Flutter e Dart mi ha spinto a costruire un mio portfolio.',

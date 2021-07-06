@@ -36,12 +36,14 @@ class HeaderBody extends StatelessWidget {
           ),
           SizedBox(height: 20),
           AutoSizeText(
-            'Sono uno Sviluppatore Software, e amo il mio lavoro.\n' +
-                'Mi son sempre più avvicinato al Front End, il mondo dove esiste un framework per ogni cosa.\n' +
-                'Mi piace seguire ogni tipo di conferenza e discutere con i colleghi sul miglior modo per adempiere le attività.',
+            "Sono una persona che ha una grande passione per il suo lavoro, \n" +
+                "oltre agli studi fatti per identificarmi come un FrontEnd developer \n" +
+                "o anche una grande curiosità per il mondo dei microcontrollori e per l'IOT in generale, \n" +
+                "nel tempo libero mi piace seguire corsi e cercare di automatizzare certi componenti presenti in casa. \n" +
+                "Di solito uso Arduino e Raspberry a seconda delle esigenze che comporta il progetto.",
             style: GoogleFonts.vollkorn(color: Colors.black, fontSize: 20),
             overflow: TextOverflow.ellipsis,
-            maxLines: 9,
+            maxLines: 12,
           ),
           SizedBox(height: 20),
           TextButton(

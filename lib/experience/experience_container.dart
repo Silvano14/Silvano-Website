@@ -79,10 +79,10 @@ final experiences = [
           "ho avuto occasione di sviluppare immagini Docker per la distribuzione degli " +
           "applicativi, per facilitare l’utilizzo delle applicazioni esistenti a chi " +
           "non avesse un ambiente pronto da utilizzare e per attuare test di integrazione. " +
-          "Intensivo uso di Electron insieme a React e Redux, tutto scritto in Typescript." +
+          "Intensivo uso di Electron insieme a React e Redux, tutto scritto in Typescript. " +
           "Utilizzo di TSDX per la compilazione e la distribuzione della nostra libreria agli applicativi associati. " +
-          "Scritto test di integrazione tramite Cypress." +
-          "Continua scrittura di test unitari per ogni parte di codice aggiunta o già esistente. Utilizzando sia Jest sia Junit." +
+          "Scritto test di integrazione tramite Cypress. " +
+          "Continua scrittura di test unitari per ogni parte di codice aggiunta o già esistente. Utilizzando sia Jest sia Junit. " +
           "Quotidiano utilizzo di Git"
     ],
   ),
