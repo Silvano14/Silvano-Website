@@ -38,7 +38,7 @@ class HeaderBody extends StatelessWidget {
           AutoSizeText(
             "Sono una persona che ha una grande passione per il suo lavoro, \n" +
                 "oltre agli studi fatti per identificarmi come un FrontEnd developer \n" +
-                "o anche una grande curiosità per il mondo dei microcontrollori e per l'IOT in generale, \n" +
+                "ho anche una grande curiosità per il mondo dei microcontrollori e per l'IOT in generale, \n" +
                 "nel tempo libero mi piace seguire corsi e cercare di automatizzare certi componenti presenti in casa. \n" +
                 "Di solito uso Arduino e Raspberry a seconda delle esigenze che comporta il progetto.",
             style: GoogleFonts.vollkorn(color: Colors.black, fontSize: 20),
