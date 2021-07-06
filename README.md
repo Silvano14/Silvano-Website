@@ -2,15 +2,21 @@
 
 A flutter project to show who is Silvano Norberti.
 
-## Getting Started
+## Prerequisites
 
-This project is a starting point for a Flutter application.
+This project works with Flutter and Dart: (Inside the Flutter SDK you already have Dart)
 
-A few resources to get you started if this is your first Flutter project:
+- [Flutter SDK](https://flutter.dev/docs/get-started/install)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Run the command: 
+` flutter run lib/main.dart `
 
-For help getting started with Flutter, view their
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+In this way you can see the website in a Chrome or Edge Browser. 
+
+## Authors
+
+Silvano Norberti - [LightManager](https://github.com/Silvano14/LightManager)
+See also the list of contributors who participated in this project.
+
+## License
+This project is licensed under the GPL 3.0 License - see the [LICENSE](https://github.com/Silvano14/Silvano-Norberti-Website/blob/master/README.md) file for details
