@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter_web/utils/colour_assets.dart';
 
@@ -36,7 +37,7 @@ class ExperienceContainer extends StatelessWidget {
           ),
           SizedBox(height: 10),
           for (final desc in experience.descriptions)
-            Text(
+            AutoSizeText(
               desc,
               style: textStyle(),
             ),
@@ -66,31 +67,45 @@ class ExperienceInfo {
   });
 }
 
+// I didn't use multi-line because it cause a weird render of the description.
 final experiences = [
   ExperienceInfo(
     company: 'Welld',
     timeLine: 'May 2019 - Now',
     descriptions: [
-      'Nel tempo trascorso nell\’azienda ho avuto occasioni di aumentare le mie conoscenze con varie tecnologie.' +
-          'Tra le più utilizzate ci sono React, Electron, Typescript e Java (JEE). \n' +
-          'Mi sono preoccupato di scrivere Unit Test sempre più precisi e completi, ho anche avuto occasione anche di scrivere test di tipo E2E. \n' +
-          'Uso quotidiano di Git per la gestione del versionamento del software.',
+      "Nel tempo trascorso nell’azienda ho avuto occasioni di aumentare le mie " +
+          "conoscenze in varie tecnologie. Tra le più utilizzate ci sono React, " +
+          "Typescript e Java (JEE). Oltre agli sviluppi sia lato BackEnd che FrontEnd " +
+          "ho avuto occasione di sviluppare immagini Docker per la distribuzione degli " +
+          "applicativi, per facilitare l’utilizzo delle applicazioni esistenti a chi " +
+          "non avesse un ambiente pronto da utilizzare e per attuare test di integrazione. " +
+          "Intensivo uso di Electron insieme a React e Redux, tutto scritto in Typescript." +
+          "Utilizzo di TSDX per la compilazione e la distribuzione della nostra libreria agli applicativi associati. " +
+          "Scritto test di integrazione tramite Cypress." +
+          "Continua scrittura di test unitari per ogni parte di codice aggiunta o già esistente. Utilizzando sia Jest sia Junit." +
+          "Quotidiano utilizzo di Git"
     ],
   ),
   ExperienceInfo(
     company: 'Edr TOOLS',
     timeLine: 'Sep 2018 - Apr 2019',
     descriptions: [
-      'Estrazione dei dati da dispositivi mobili con software creati per Raspberry con l\'utilizzo di librerie in C e Python.\n' +
-          'Creazione di script in Python per ottimizzare l’efficienza gestionale.\n' +
-          'Gestione di software proprietari tramite QTCreator e CPP per l’estrazione dei dati da hard disk meccanici.\n',
+      'Estrazione dei dati da dispositivi mobili con software creati per Raspberry con l\'utilizzo di librerie in C e Python. ' +
+          'Creazione di script in Python per ottimizzare l’efficienza gestionale. ' +
+          'Gestione di software proprietari tramite QTCreator e CPP per l’estrazione dei dati da hard disk meccanici. ',
     ],
   ),
   ExperienceInfo(
     company: 'ITS Kennedy',
     timeLine: '2016 - 2018',
     descriptions: [
-      'Attività e associazioni: Studio e praticità nel corso di studi I.O.T (Internet of Things)'
+      'Attività e associazioni: Studio e praticità nel corso di studi I.O.T (Internet of Things) \n' +
+          "Nel percorso di studi c’era la possibilità di seguire varie tipologie di corsi. " +
+          "Il corso del IOT permetteva un approfondimento nel mondo del Networking e una maggiore" +
+          "focalizzazione sulla scrittura di codice nei micro controlli con il linguaggio C. " +
+          "Durante il corso abbiamo usato un PIC32, insieme ai micro controlli abbiamo lavorato" +
+          "varie volte in team per poter sfruttare le conoscenze che acquisivamo nel corso del tempo," +
+          "oltre ad attuare un rafforzamento in senso di lavoro in team."
     ],
   ),
 ];

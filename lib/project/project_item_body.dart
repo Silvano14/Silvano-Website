@@ -40,7 +40,7 @@ class _ProjectItemBodyState extends State<ProjectItemBody> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          // Used for keeping distance between text
+          // Used to keep the distance between texts
           border: Border.all(
         color: Colors.transparent,
         width: 2,

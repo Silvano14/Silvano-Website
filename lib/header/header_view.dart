@@ -28,7 +28,6 @@ class HeaderDesktopView extends StatelessWidget {
     final imageWidth = width * 0.47;
     return Container(
       padding: kScreenPadding,
-      height: 600,
       width: kInitWidth,
       child: Row(
         children: [
@@ -57,10 +56,8 @@ class HeaderMobileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
     return Container(
       width: width,
-      height: height * 0.9,
       child: Column(
         children: [
           Image.asset(
