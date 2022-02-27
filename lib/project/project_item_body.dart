@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio_flutter_web/components/link-view.dart';
 import 'package:portfolio_flutter_web/project/project_view.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -56,21 +57,7 @@ class _ProjectItemBodyState extends State<ProjectItemBody> {
             ),
           ),
           SizedBox(height: 10),
-          MouseRegion(
-            onEnter: _onEnter,
-            onExit: _onExit,
-            cursor: SystemMouseCursors.click,
-            child: RichText(
-                text: TextSpan(
-                    text: widget.item.title,
-                    style: GoogleFonts.vollkorn(
-                      color: textColor,
-                      fontSize: 30,
-                      decoration: textDecoration,
-                    ),
-                    recognizer: new TapGestureRecognizer()
-                      ..onTap = () => launch(widget.item.url))),
-          ),
+          LinkView(LinkProps(title: widget.item.title, url: widget.item.url)),
           SizedBox(height: 10),
           Text(widget.item.description,
               style: GoogleFonts.vollkorn(fontSize: 20)),

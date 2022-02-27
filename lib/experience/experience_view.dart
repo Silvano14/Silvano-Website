@@ -22,31 +22,29 @@ class ExperienceView extends StatelessWidget {
 
 class ExperienceDesktopView extends StatelessWidget {
   final colors = ColoursAssets.all;
-
   @override
   Widget build(BuildContext context) {
     return DesktopViewBuilder(
       titleText: ExperienceView.title,
       children: [
         SizedBox(height: 20),
-        Row(
-          children: [
-            for (var index = 0; index < experiences.length; index++)
+        for (var j = 0; j < experiences.length; j++)
+          Row(
+            children: [
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(right: 8, bottom: 8),
+                      padding: const EdgeInsets.only(right: 8, bottom: 88),
                       child: ExperienceContainer(
-                          experience: experiences.elementAt(index),
-                          index: index),
+                          experience: experiences.elementAt(j), index: j),
                     )
                   ],
                 ),
               ),
-          ],
-        ),
+            ],
+          ),
       ],
     );
   }
