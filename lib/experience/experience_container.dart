@@ -81,18 +81,17 @@ class ExperienceInfo {
   });
 }
 
-// I didn't use multi-line because it cause a weird render of the description.
 final experiences = [
   ExperienceInfo(
       company: new Company('https://www.dstech.it/', 'Ds Tech '),
       timeLine: 'Nov 2021 - Now',
       descriptions:
-          'Ho lavorato ad un progetto di Enel come unico sviluppatore front end.'
+          'Ho lavorato ad un progetto di Enel come unico sviluppatore front end. '
           'Il progetto in questione è un software dove il cliente si occupa di compilare la documentazione (una sorta di form). '
-          'In autonomia gestivo il progetto e implementavo tutte le sistemazioni e nuovi sviluppi che richiedeva il cliente.'
+          'In autonomia gestivo il progetto e implementavo tutte le sistemazioni e nuovi sviluppi che richiedeva il cliente. '
           'Avendo avuto piena libertà sul progetto ho avuto il bisogno di attuare un refactoring '
           'regolare del codice ogni qual volta la sezione su cui lavoravo ne aveva bisogno (quasi ogni sezione), '
-          'introdotto migliorie di performance, come un miglior utilizzo degli hooks, e stilizzazioni responsive.'),
+          'introdotto migliorie di performance, come un miglior utilizzo degli hooks, e stilizzazioni responsive. '),
   ExperienceInfo(
       company: new Company('https://www.welld.ch/', 'Welld'),
       timeLine: 'May 2019 - Nov 2021',
@@ -106,25 +105,22 @@ final experiences = [
           'Intensivo uso di Electron insieme a React e Redux, tutto scritto in Typescript. '
           'Utilizzo di TSDX per la compilazione e la distribuzione della nostra libreria agli applicativi associati. '
           'Scritto test di integrazione tramite Cypress. '
-          'Continua scrittura di test unitari per ogni parte di codice aggiunta o già esistente. Utilizzando sia Jest sia Junit.'
+          'Continua scrittura di test unitari per ogni parte di codice aggiunta o già esistente. Utilizzando sia Jest sia Junit. '
           'Quotidiano utilizzo di Git'),
   ExperienceInfo(
       company: new Company('https://edrtools.eu/', 'EDR Tools'),
       timeLine: 'Sep 2018 - Apr 2019',
       descriptions:
           'Estrazione dei dati da dispositivi mobili con software creati per Raspberry con l\'utilizzo di librerie in C e Python. '
-          'Creazione di script in Python per ottimizzare l’efficienza gestionale.'
-          'Gestione di software proprietari tramite QTCreator e CPP per l’estrazione dei dati da hard disk meccanici.'),
+          'Creazione di script in Python per ottimizzare l’efficienza gestionale. '
+          'Gestione di software proprietari tramite QTCreator e CPP per l’estrazione dei dati da hard disk meccanici. '),
   ExperienceInfo(
       company: new Company(
           'https://www.tecnicosuperiorekennedy.it/', 'ITS Alto Adriatico'),
       timeLine: '2016 - 2018',
       descriptions:
-          'Attività e associazioni: Studio e praticità nel corso di studi I.O.T (Internet of Things)'
-          'Nel percorso di studi c’era la possibilità di seguire varie tipologie di corsi.'
-          'Il corso del IOT permetteva un approfondimento nel mondo del Networking e una maggiore'
-          'focalizzazione sulla scrittura di codice nei micro controlli con il linguaggio C.'
-          'Durante il corso abbiamo usato un PIC32, insieme ai micro controlli abbiamo lavorato'
-          'varie volte in team per poter sfruttare le conoscenze che acquisivamo nel corso del tempo,'
-          'oltre ad attuare un rafforzamento in senso di lavoro in team.'),
+          'Studio e praticità nel corso di studi I.O.T (Internet of Things)'
+          'Nel percorso di studi c’era la possibilità di seguire varie tipologie di corsi. '
+          'Il corso di IOT permetteva un approfondimento nel mondo del Networking e una maggiore'
+          'focalizzazione sulla scrittura di codice nei micro controlli con il linguaggio C. '),
 ];

@@ -28,9 +28,9 @@ class ExperienceDesktopView extends StatelessWidget {
       titleText: ExperienceView.title,
       children: [
         SizedBox(height: 20),
-        for (var j = 0; j < experiences.length; j++)
-          Row(
-            children: [
+        Row(
+          children: [
+            for (var j = 0; j < experiences.length; j++)
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -43,8 +43,8 @@ class ExperienceDesktopView extends StatelessWidget {
                   ],
                 ),
               ),
-            ],
-          ),
+          ],
+        ),
       ],
     );
   }
