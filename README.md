@@ -11,7 +11,7 @@ This project works with Flutter and Dart: (Inside the Flutter SDK you already ha
 Run the command: 
 ` flutter run lib/main.dart `
 
-In this way you can see the website in a Chrome or Edge Browser. 
+Now you can see the website in a Chrome or Edge Browser. 
 
 ## Authors
 
