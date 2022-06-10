@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter_web/components/divider.dart';
 
 class MobileViewBuilder extends StatelessWidget {
   final List<Widget> children;
@@ -14,7 +15,7 @@ class MobileViewBuilder extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(height: 20),
-          Divider(thickness: 5),
+          CustomDivider(),
           SizedBox(height: 20),
           FittedBox(
             child: Text(

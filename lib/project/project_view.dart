@@ -8,7 +8,9 @@ class ProjectView extends StatelessWidget {
   const ProjectView({
     Key key,
   }) : super(key: key);
+
   static const title = 'Progetti';
+
   @override
   Widget build(BuildContext context) {
     return MobileDesktopViewBuilder(

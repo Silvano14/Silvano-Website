@@ -28,24 +28,31 @@ class HeaderBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Ciao! Sono Silvano Norberti",
-            style: GoogleFonts.vollkorn(
-                color: Colors.black, fontSize: isMobile ? 30 : 40),
-            maxLines: 2,
+          Container(
+            width: MediaQuery.of(context).size.width * (isMobile ? 1 : 0.5),
+            child: AutoSizeText(
+              "Benvenuta/o nel portfolio di Silvano Norberti",
+              style: GoogleFonts.vollkorn(
+                  color: Colors.black, fontSize: isMobile ? 30 : 40),
+              maxLines: isMobile ? 3 : 1,
+            ),
           ),
           SizedBox(height: 20),
-          AutoSizeText(
-            "Sono una persona che ha una grande passione per il suo lavoro, \n" +
-                "oltre agli studi fatti per identificarmi come un FrontEnd developer \n" +
-                "ho anche una grande curiosità per il mondo dei microcontrollori e per l'IOT in generale, \n" +
-                "nel tempo libero mi piace seguire corsi e cercare di automatizzare certi componenti presenti in casa. \n" +
-                "Di solito uso Arduino e Raspberry a seconda delle esigenze che comporta il progetto.",
-            style: GoogleFonts.vollkorn(color: Colors.black, fontSize: 20),
-            overflow: TextOverflow.ellipsis,
-            maxLines: 12,
+          Container(
+            width: MediaQuery.of(context).size.width * (isMobile ? 1 : 0.6),
+            height: isMobile ? 300 : 270,
+            child: AutoSizeText(
+              'Se hai raggiunto questo sito, vuol dire che sei davvero interessata/o a conoscere che tipo di persona sono, e per questo già ti ringrazio!\n'
+              'Bando ai convenevoli, io sono una persona con una infinita passione per il proprio lavoro.\n'
+              'Io sono un FrontEnd developer, colui che deve rendere l\'applicazione una esperienza di piacere e, soprattutto, semplicità per l\'utente finale, utilizzando tantissimo design e '
+              'una immensa quantità di problem solving.\n'
+              'L\'utente finale, in questo mestiere in particolare, è molto propenso a fare richieste al limite dell\'assurdo, ma si deve essere pronti anche a dare il giusto compromesso e non farsi abbattere.',
+              style: GoogleFonts.vollkorn(color: Colors.black, fontSize: 22),
+              overflow: TextOverflow.ellipsis,
+              maxLines: 15,
+            ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 40),
           TextButton(
             onPressed: () => launch('mailto:silvano.norberti@gmail.com'),
             child: Padding(

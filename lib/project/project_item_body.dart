@@ -1,6 +1,4 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_flutter_web/components/link-view.dart';
 import 'package:portfolio_flutter_web/project/project_view.dart';

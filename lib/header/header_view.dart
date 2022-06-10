@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_flutter_web/components/divider.dart';
 import 'package:portfolio_flutter_web/components/mobile_desktop_view_builder.dart';
 import 'package:portfolio_flutter_web/constants.dart';
 import 'package:portfolio_flutter_web/header/header_body.dart';
@@ -29,18 +30,24 @@ class HeaderDesktopView extends StatelessWidget {
     return Container(
       padding: kScreenPadding,
       width: kInitWidth,
-      child: Row(
+      child: Column(
         children: [
-          HeaderBody(
-            isMobile: false,
-          ),
-          Spacer(),
-          Container(
-            child: Image(
-              image: AssetImage('images/header_logo.png'),
-              height: isSmall ? imageWidth : 400,
-              filterQuality: FilterQuality.high,
-            ),
+          CustomDivider(),
+          Row(
+            children: [
+              HeaderBody(
+                isMobile: false,
+              ),
+              Spacer(),
+              Container(
+                child: Image(
+                  width: MediaQuery.of(context).size.width * 0.25,
+                  image: AssetImage('images/header_logo.png'),
+                  height: isSmall ? imageWidth : 450,
+                  filterQuality: FilterQuality.high,
+                ),
+              ),
+            ],
           ),
         ],
       ),
