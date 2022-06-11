@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_flutter_web/components/link-view.dart';
 import 'package:portfolio_flutter_web/project/project_view.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class ProjectItemBody extends StatefulWidget {
   const ProjectItemBody({
@@ -21,20 +20,6 @@ class _ProjectItemBodyState extends State<ProjectItemBody> {
   Color textColor = Colors.black;
   TextDecoration textDecoration = TextDecoration.none;
 
-  void _onEnter(PointerEvent details) {
-    setState(() {
-      textColor = Colors.blue;
-      textDecoration = TextDecoration.underline;
-    });
-  }
-
-  void _onExit(PointerEvent details) {
-    setState(() {
-      textColor = Colors.black;
-      textDecoration = TextDecoration.none;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -48,17 +33,16 @@ class _ProjectItemBodyState extends State<ProjectItemBody> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           InkWell(
-            onTap: () => launch(widget.item.url),
+            onTap: () => launchUrlString(widget.item.url),
             child: Image.asset(
               widget.item.image,
-              filterQuality: FilterQuality.high,
+              height: 162,
             ),
           ),
           SizedBox(height: 10),
           LinkView(LinkProps(title: widget.item.title, url: widget.item.url)),
           SizedBox(height: 10),
-          Text(widget.item.description,
-              style: GoogleFonts.vollkorn(fontSize: 20)),
+          widget.item.description,
           SizedBox(height: 10),
           Wrap(
             children: [

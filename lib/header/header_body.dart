@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class HeaderBody extends StatelessWidget {
   final bool isMobile;
@@ -28,6 +28,7 @@ class HeaderBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(height: 40),
           Container(
             width: MediaQuery.of(context).size.width * (isMobile ? 1 : 0.5),
             child: AutoSizeText(
@@ -40,7 +41,7 @@ class HeaderBody extends StatelessWidget {
           SizedBox(height: 20),
           Container(
             width: MediaQuery.of(context).size.width * (isMobile ? 1 : 0.6),
-            height: isMobile ? 300 : 270,
+            height: isMobile ? 350 : 270,
             child: AutoSizeText(
               'Se hai raggiunto questo sito, vuol dire che sei davvero interessata/o a conoscere che tipo di persona sono, e per questo già ti ringrazio!\n'
               'Bando ai convenevoli, io sono una persona con una infinita passione per il proprio lavoro.\n'
@@ -54,7 +55,8 @@ class HeaderBody extends StatelessWidget {
           ),
           SizedBox(height: 40),
           TextButton(
-            onPressed: () => launch('mailto:silvano.norberti@gmail.com'),
+            onPressed: () =>
+                launchUrlString('mailto:silvano.norberti@gmail.com'),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
@@ -68,6 +70,7 @@ class HeaderBody extends StatelessWidget {
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.resolveWith(getColor)),
           ),
+          SizedBox(height: 40),
         ]);
   }
 }
