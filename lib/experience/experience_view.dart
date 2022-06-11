@@ -22,6 +22,7 @@ class ExperienceView extends StatelessWidget {
 
 class ExperienceDesktopView extends StatelessWidget {
   final colors = ColoursAssets.all;
+
   @override
   Widget build(BuildContext context) {
     return DesktopViewBuilder(

@@ -83,30 +83,30 @@ class ExperienceInfo {
 
 final experiences = [
   ExperienceInfo(
-      company: new Company('https://www.dstech.it/', 'Ds Tech '),
-      timeLine: 'Nov 2021 - Now',
-      descriptions:
-          'Ho lavorato ad un progetto di Enel come unico sviluppatore front end. '
-          'Il progetto in questione è un software dove il cliente si occupa di compilare la documentazione (una sorta di form). '
-          'In autonomia gestivo il progetto e implementavo tutte le sistemazioni e nuovi sviluppi che richiedeva il cliente. '
-          'Avendo avuto piena libertà sul progetto ho avuto il bisogno di attuare un refactoring '
-          'regolare del codice ogni qual volta la sezione su cui lavoravo ne aveva bisogno (quasi ogni sezione), '
-          'introdotto migliorie di performance, come un miglior utilizzo degli hooks, e stilizzazioni responsive. '),
+    company: new Company('https://www.dstech.it/', 'Ds Tech '),
+    timeLine: 'Nov 2021 - Now',
+    descriptions:
+        "Avuta una alta responsabilità progettuale, da solo ho gestito la parte Frontend di un progetto che aveva come scopo la compilazione di documenti"
+        "Al mio arrivo il progetto era in uno stato pietoso, ma con infinito olio di gomito e grande voglia di scrivere codice l'ho riscritto da zero utilizzando tutte le best practice di cui ero a conoscenza.\n"
+        "Dopo aver sistemato il codice ho dovuto attuare varie migliorie di perfomance e implementazioni grafiche, per poter raggiungere questi scopi ho usato principalmente Redux e Chakra."
+        "Il progetto è stato anche adattato ad essere valido per la WCAG, un argomento talmente interessante che mi ha reso particolarmente felice studiarlo ed applicarlo.",
+  ),
   ExperienceInfo(
-      company: new Company('https://www.welld.ch/', 'Welld'),
-      timeLine: 'May 2019 - Nov 2021',
-      descriptions:
-          'Nel tempo trascorso nell’azienda ho avuto occasioni di aumentare le mie '
-          'conoscenze in varie tecnologie. Tra le più utilizzate ci sono React, '
-          'Typescript e Java (JEE). Oltre agli sviluppi sia lato BackEnd che FrontEnd '
-          'ho avuto occasione di sviluppare immagini Docker per la distribuzione degli '
-          'applicativi, per facilitare l’utilizzo delle applicazioni esistenti a chi '
-          'non avesse un ambiente pronto da utilizzare e per attuare test di integrazione. '
-          'Intensivo uso di Electron insieme a React e Redux, tutto scritto in Typescript. '
-          'Utilizzo di TSDX per la compilazione e la distribuzione della nostra libreria agli applicativi associati. '
-          'Scritto test di integrazione tramite Cypress. '
-          'Continua scrittura di test unitari per ogni parte di codice aggiunta o già esistente. Utilizzando sia Jest sia Junit. '
-          'Quotidiano utilizzo di Git'),
+    company: new Company('https://www.welld.ch/', 'Welld'),
+    timeLine: 'May 2019 - Nov 2021',
+    descriptions:
+        'Nel tempo trascorso nell’azienda ho avuto occasioni di aumentare le mie '
+        'conoscenze in varie tecnologie. Tra le più utilizzate ci sono React, '
+        'Typescript e Java (JEE). Oltre agli sviluppi sia lato BackEnd che FrontEnd '
+        'ho avuto occasione di sviluppare immagini Docker per la distribuzione degli '
+        'applicativi, per facilitare l’utilizzo delle applicazioni esistenti a chi '
+        'non avesse un ambiente pronto da utilizzare e per attuare test di integrazione. '
+        'Intensivo uso di Electron insieme a React e Redux, tutto scritto in Typescript. '
+        'Utilizzo di TSDX per la compilazione e la distribuzione della nostra libreria agli applicativi associati. '
+        'Scritto test di integrazione tramite Cypress. '
+        'Continua scrittura di test unitari per ogni parte di codice aggiunta o già esistente. Utilizzando sia Jest sia Junit. '
+        'Quotidiano utilizzo di Git',
+  ),
   ExperienceInfo(
       company: new Company('https://edrtools.eu/', 'EDR Tools'),
       timeLine: 'Sep 2018 - Apr 2019',
