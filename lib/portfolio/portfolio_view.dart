@@ -34,12 +34,12 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
       navigationItems = [
         NavigationItem(
           'Progetti',
-          FaIcon(FontAwesomeIcons.projectDiagram),
+          FaIcon(FontAwesomeIcons.diagramProject),
           key: projectKey,
         ),
         NavigationItem(
           'Abilità',
-          FaIcon(FontAwesomeIcons.running),
+          FaIcon(FontAwesomeIcons.personRunning),
           key: skillsKey,
         ),
         NavigationItem(

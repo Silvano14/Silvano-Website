@@ -15,7 +15,6 @@ class LinkProps {
 
 class LinkView extends StatefulWidget {
   const LinkView(this.item);
-
   final LinkProps item;
 
   @override
@@ -55,7 +54,7 @@ class _LinkViewState extends State<LinkView> {
                   decoration: textDecoration,
                 ),
                 recognizer: new TapGestureRecognizer()
-                  ..onTap = () => launch(widget.item.url))),
+                  ..onTap = () => launchUrl(Uri.parse(widget.item.url)))),
       ),
     );
   }

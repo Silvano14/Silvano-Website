@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter_web/components/link-view.dart';
 import 'package:portfolio_flutter_web/project/project_view.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectItemBody extends StatefulWidget {
   const ProjectItemBody({
@@ -33,7 +33,7 @@ class _ProjectItemBodyState extends State<ProjectItemBody> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           InkWell(
-            onTap: () => launchUrlString(widget.item.url),
+            onTap: () => launchUrl(Uri.parse(widget.item.url)),
             child: Image.asset(
               widget.item.image,
               height: 162,

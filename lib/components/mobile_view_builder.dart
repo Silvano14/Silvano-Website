@@ -20,7 +20,7 @@ class MobileViewBuilder extends StatelessWidget {
           FittedBox(
             child: Text(
               titleText,
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.displayMedium,
               maxLines: 1,
             ),
           ),
