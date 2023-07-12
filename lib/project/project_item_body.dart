@@ -5,13 +5,13 @@ import 'package:url_launcher/url_launcher_string.dart';
 
 class ProjectItemBody extends StatefulWidget {
   const ProjectItemBody({
-    Key key,
-    @required this.item,
+    super.key,
+    required this.item,
     this.isMobile,
-  }) : super(key: key);
+  });
 
   final ProjectItem item;
-  final bool isMobile;
+  final bool? isMobile;
   @override
   _ProjectItemBodyState createState() => _ProjectItemBodyState();
 }

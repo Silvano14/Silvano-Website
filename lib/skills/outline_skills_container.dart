@@ -5,19 +5,19 @@ import 'package:portfolio_flutter_web/utils/colour_assets.dart';
 
 class OutlineSkillsContainer extends StatelessWidget {
   const OutlineSkillsContainer({
-    Key key,
-    @required this.index,
+    super.key,
+    required this.index,
     this.rowIndex,
     this.isMobile,
-  }) : super(key: key);
+  });
 
   final int index;
-  final int rowIndex;
-  final bool isMobile;
+  final int? rowIndex;
+  final bool? isMobile;
 
   @override
   Widget build(BuildContext context) {
-    final parsedIndex = isMobile ?? false ? index : index * 2 + rowIndex;
+    final parsedIndex = isMobile ?? false ? index : index * 2 + (rowIndex ?? 0);
     final colors = ColoursAssets.all;
     return Container(
       width: isMobile ?? false ? double.infinity : null,
@@ -31,9 +31,9 @@ class OutlineSkillsContainer extends StatelessWidget {
       child: Text(
         skills[parsedIndex],
         style: GoogleFonts.vollkorn(
-              fontSize: 30,
-              color: Colors.black,
-            ),
+          fontSize: 30,
+          color: Colors.black,
+        ),
       ),
     );
   }

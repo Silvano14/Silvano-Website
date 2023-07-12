@@ -6,9 +6,7 @@ import 'package:portfolio_flutter_web/experience/experience_container.dart';
 import 'package:portfolio_flutter_web/utils/colour_assets.dart';
 
 class ExperienceView extends StatelessWidget {
-  const ExperienceView({
-    Key key,
-  }) : super(key: key);
+  const ExperienceView({super.key});
 
   static const title = 'Esperienze';
   @override

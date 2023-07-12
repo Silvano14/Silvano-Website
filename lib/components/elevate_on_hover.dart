@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ElevateOnHover extends StatefulWidget {
+  const ElevateOnHover({super.key, required this.child});
+
   final Widget child;
 
-  const ElevateOnHover({Key key, this.child}) : super(key: key);
   @override
   _ElevateOnHoverState createState() => _ElevateOnHoverState();
 }

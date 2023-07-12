@@ -31,7 +31,7 @@ class FooterDesktopView extends StatelessWidget {
           for (final social in socials)
             IconButton(
               icon: social.icon,
-              onPressed: () => launch(social.url),
+              onPressed: () => launchUrl(social.url as Uri),
               color: Colors.black,
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
@@ -81,8 +81,8 @@ class SocialInfo {
   final Widget icon;
   final String url;
   SocialInfo({
-    @required this.icon,
-    @required this.url,
+    required this.icon,
+    required this.url,
   });
 }
 

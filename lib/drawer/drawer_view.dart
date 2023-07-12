@@ -15,9 +15,7 @@ class DrawerView extends StatelessWidget {
 }
 
 class DrawerMobileView extends StatelessWidget {
-  const DrawerMobileView({
-    Key key,
-  }) : super(key: key);
+  const DrawerMobileView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +52,7 @@ class DrawerMobileView extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.pop(context);
-                return scrollController.animateTo(
+                scrollController.animateTo(
                   item.position,
                   duration: Duration(milliseconds: 700),
                   curve: Curves.easeInOut,

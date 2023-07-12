@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_flutter_web/constants.dart';
 
 class DesktopViewBuilder extends StatelessWidget {
-  const DesktopViewBuilder({Key key, this.titleText, this.children})
-      : super(key: key);
+  const DesktopViewBuilder(
+      {super.key, required this.titleText, required this.children});
 
   final String titleText;
   final List<Widget> children;
@@ -19,7 +19,7 @@ class DesktopViewBuilder extends StatelessWidget {
         children: [
           Text(
             titleText,
-            style: Theme.of(context).textTheme.headline2,
+            style: Theme.of(context).textTheme.displayMedium,
           ),
           ...children,
         ],

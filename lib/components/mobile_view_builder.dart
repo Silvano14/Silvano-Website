@@ -5,8 +5,8 @@ class MobileViewBuilder extends StatelessWidget {
   final List<Widget> children;
   final String titleText;
 
-  const MobileViewBuilder({Key key, this.titleText, this.children})
-      : super(key: key);
+  const MobileViewBuilder(
+      {super.key, required this.titleText, required this.children});
 
   @override
   Widget build(BuildContext context) {

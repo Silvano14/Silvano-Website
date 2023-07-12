@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_flutter_web/components/mobile_desktop_view_builder.dart';
@@ -17,9 +16,7 @@ class NavigationBarView extends StatelessWidget {
 }
 
 class NavigationDesktopView extends StatelessWidget {
-  const NavigationDesktopView({
-    Key key,
-  }) : super(key: key);
+  const NavigationDesktopView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +38,7 @@ class NavigationDesktopView extends StatelessWidget {
           for (var item in navigationItem)
             NavigationBarItem(
                 onPressed: () {
-                  return scrollController.animateTo(
+                  scrollController.animateTo(
                     item.position,
                     duration: Duration(milliseconds: 700),
                     curve: Curves.easeInOut,
@@ -55,9 +52,7 @@ class NavigationDesktopView extends StatelessWidget {
 }
 
 class NavigationBarMobileView extends StatelessWidget {
-  const NavigationBarMobileView({
-    Key key,
-  }) : super(key: key);
+  const NavigationBarMobileView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -82,10 +77,10 @@ class NavigationBarMobileView extends StatelessWidget {
 
 class NavigationBarItem extends StatelessWidget {
   const NavigationBarItem({
-    Key key,
-    @required this.onPressed,
-    @required this.text,
-  }) : super(key: key);
+    super.key,
+    required this.onPressed,
+    required this.text,
+  });
 
   final void Function() onPressed;
   final String text;

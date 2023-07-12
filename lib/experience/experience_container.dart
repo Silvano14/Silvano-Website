@@ -5,10 +5,10 @@ import 'package:portfolio_flutter_web/utils/colour_assets.dart';
 
 class ExperienceContainer extends StatelessWidget {
   const ExperienceContainer({
-    Key key,
-    @required this.experience,
-    @required this.index,
-  }) : super(key: key);
+    super.key,
+    required this.experience,
+    required this.index,
+  });
 
   final ExperienceInfo experience;
   final int index;
@@ -46,7 +46,7 @@ class ExperienceContainer extends StatelessWidget {
   }
 }
 
-TextStyle textStyle({bool isBold, bool isGrey}) {
+TextStyle textStyle({bool? isBold, bool? isGrey}) {
   return TextStyle(
       fontSize: 20,
       height: 1.3,
@@ -75,9 +75,9 @@ class ExperienceInfo {
   final String descriptions;
 
   ExperienceInfo({
-    @required this.company,
-    @required this.timeLine,
-    @required this.descriptions,
+    required this.company,
+    required this.timeLine,
+    required this.descriptions,
   });
 }
 

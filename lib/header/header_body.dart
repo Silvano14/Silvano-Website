@@ -6,9 +6,9 @@ import 'package:url_launcher/url_launcher_string.dart';
 class HeaderBody extends StatelessWidget {
   final bool isMobile;
   const HeaderBody({
-    Key key,
+    super.key,
     this.isMobile = true,
-  }) : super(key: key);
+  });
 
   Color getColor(Set<MaterialState> states) {
     const Set<MaterialState> interactiveStates = <MaterialState>{

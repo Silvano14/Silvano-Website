@@ -3,13 +3,13 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 class MobileDesktopViewBuilder extends StatelessWidget {
   const MobileDesktopViewBuilder({
-    Key key,
+    super.key,
     this.showMobile,
-    @required this.mobileView,
-    @required this.desktopView,
-  }) : super(key: key);
+    required this.mobileView,
+    required this.desktopView,
+  });
 
-  final bool showMobile;
+  final bool? showMobile;
   final Widget mobileView;
   final Widget desktopView;
 

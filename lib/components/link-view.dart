@@ -8,8 +8,8 @@ class LinkProps {
   final String url;
 
   LinkProps({
-    @required this.title,
-    @required this.url,
+    required this.title,
+    required this.url,
   });
 }
 

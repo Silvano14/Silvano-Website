@@ -5,9 +5,7 @@ import 'package:portfolio_flutter_web/components/mobile_view_builder.dart';
 import 'package:portfolio_flutter_web/skills/outline_skills_container.dart';
 
 class SkillsView extends StatelessWidget {
-  const SkillsView({
-    Key key,
-  }) : super(key: key);
+  const SkillsView({super.key});
 
   static const title = 'Abilità';
 
@@ -23,9 +21,7 @@ class SkillsView extends StatelessWidget {
 }
 
 class SkillsDesktopView extends StatelessWidget {
-  const SkillsDesktopView({
-    Key key,
-  }) : super(key: key);
+  const SkillsDesktopView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -53,9 +49,7 @@ class SkillsDesktopView extends StatelessWidget {
 }
 
 class SkillsMobileView extends StatelessWidget {
-  const SkillsMobileView({
-    Key key,
-  }) : super(key: key);
+  const SkillsMobileView({super.key});
 
   @override
   Widget build(BuildContext context) {

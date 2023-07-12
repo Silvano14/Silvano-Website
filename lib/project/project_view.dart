@@ -7,9 +7,7 @@ import 'package:portfolio_flutter_web/components/mobile_view_builder.dart';
 import 'package:portfolio_flutter_web/project/project_item_body.dart';
 
 class ProjectView extends StatelessWidget {
-  const ProjectView({
-    Key key,
-  }) : super(key: key);
+  const ProjectView({super.key});
 
   static const title = 'Progetti';
 
@@ -53,11 +51,11 @@ class ProjectItem {
   final List<String> technologies;
 
   ProjectItem({
-    @required this.image,
-    @required this.title,
-    @required this.url,
-    @required this.description,
-    @required this.technologies,
+    required this.image,
+    required this.title,
+    required this.url,
+    required this.description,
+    required this.technologies,
   });
 }
 

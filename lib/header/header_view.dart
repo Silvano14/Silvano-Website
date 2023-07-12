@@ -5,9 +5,7 @@ import 'package:portfolio_flutter_web/constants.dart';
 import 'package:portfolio_flutter_web/header/header_body.dart';
 
 class HeaderView extends StatelessWidget {
-  const HeaderView({
-    Key key,
-  }) : super(key: key);
+  const HeaderView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +17,8 @@ class HeaderView extends StatelessWidget {
 }
 
 class HeaderDesktopView extends StatelessWidget {
-  const HeaderDesktopView({
-    Key key,
-  }) : super(key: key);
+  const HeaderDesktopView({super.key});
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -56,9 +53,7 @@ class HeaderDesktopView extends StatelessWidget {
 }
 
 class HeaderMobileView extends StatelessWidget {
-  const HeaderMobileView({
-    Key key,
-  }) : super(key: key);
+  const HeaderMobileView({super.key});
 
   @override
   Widget build(BuildContext context) {

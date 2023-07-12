@@ -13,9 +13,7 @@ import 'package:portfolio_flutter_web/skills/skills_view.dart';
 import 'package:provider/provider.dart';
 
 class PortfolioView extends StatefulWidget {
-  const PortfolioView({
-    Key key,
-  }) : super(key: key);
+  const PortfolioView({super.key});
 
   @override
   _PortfolioViewState createState() => _PortfolioViewState();
@@ -92,7 +90,7 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
 }
 
 class NavigationItem {
-  NavigationItem(this.text, this.icon, {@required this.key});
+  NavigationItem(this.text, this.icon, {required this.key});
   final String text;
   final GlobalKey key;
   final FaIcon icon;
@@ -101,8 +99,8 @@ class NavigationItem {
 }
 
 _getPosition(GlobalKey key) {
-  final RenderBox renderBox = key.currentContext.findRenderObject();
-  final position = renderBox.localToGlobal(Offset.zero);
-  final scrollOffset = position.dy;
-  return scrollOffset;
+  // final RenderBox renderBox = key.currentContext.findRenderObject();
+  // final position = renderBox.localToGlobal(Offset.zero);
+  // final scrollOffset = position.dy;
+  // return scrollOffset;
 }
