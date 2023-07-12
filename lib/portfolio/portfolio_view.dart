@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:after_layout/after_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -28,6 +30,7 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
   final ScrollController scrollController = ScrollController(
     initialScrollOffset: 0,
   );
+
   @override
   void afterFirstLayout(BuildContext context) {
     setState(() {
@@ -98,9 +101,13 @@ class NavigationItem {
   double get position => _getPosition(key);
 }
 
-_getPosition(GlobalKey key) {
-  // final RenderBox renderBox = key.currentContext.findRenderObject();
-  // final position = renderBox.localToGlobal(Offset.zero);
-  // final scrollOffset = position.dy;
-  // return scrollOffset;
+double _getPosition(GlobalKey key) {
+  final renderBox = key.currentContext!.findRenderObject() as RenderBox?;
+  if (renderBox == null) {
+    log('errore');
+    return 0;
+  }
+  final position = renderBox.localToGlobal(Offset.zero);
+  final scrollOffset = position.dy;
+  return scrollOffset;
 }
